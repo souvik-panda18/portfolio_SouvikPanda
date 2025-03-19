@@ -10,17 +10,29 @@
 </head>
 <body class="bg-black font-sans " >
     
-    <!-- Navigation Menu Bar -->
-    <nav class="bg-gray-800 pl-[900px] bg-opacity-0 p-6 fixed w-full top-0 shadow-lg shadow-[#B5A8D5] z-50">
-
-        <ul class="flex justify-center space-x-10 text-2xl font-semibold">
+     <!-- Navbar -->
+     <nav class="bg-black p-6  w-full top-0 shadow-lg shadow-[#7A73D1] z-50 flex items-center justify-between">
+        <img src="Animation - 1742287435949.gif" alt="Logo" class="w-12 h-12 rounded-full shadow-md">
+        <ul class="hidden md:flex space-x-10 text-2xl font-semibold">
             <li><a href="index.html" class="text-white hover:text-blue-400">Home</a></li>
             <li><a href="skills.html" class="text-white hover:text-blue-400">Skills</a></li>
             <li><a href="resume.html" class="text-white hover:text-blue-400">Resume</a></li>
             <li><a href="projects.html" class="text-white hover:text-blue-400">Projects</a></li>
             <li><a href="contacts.html" class="text-white hover:text-blue-400">Contacts</a></li>
         </ul>
+        <button class="md:hidden text-white text-2xl" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-black text-white text-center p-4 space-y-4" id="mobile-menu">
+        <a href="index.html" class="block hover:text-blue-400">Home</a>
+        <a href="skills.html" class="block hover:text-blue-400">Skills</a>
+        <a href="resume.html" class="block hover:text-blue-400">Resume</a>
+        <a href="projects.html" class="block hover:text-blue-400">Projects</a>
+        <a href="contacts.html" class="block hover:text-blue-400">Contacts</a>
+    </div>
 
     <!-- Contact Form -->
     <div class="max-w-lg mx-auto mt-24 p-8 bg-[#FFEDFA] shadow-lg rounded-lg">
@@ -55,7 +67,13 @@
         <p class="text-gray-500 mt-4">&copy; 2023 Souvik Panda. Designed by <span class="text-blue-400">Souvik</span></p>
     </footer>
 
-    <script>
+    <script>  
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
         (function(){
             emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
         })();
@@ -74,6 +92,6 @@
                     console.log('FAILED...', error);
                 });
         });
-    </script>
+    </script>   
 </body>
 </html>

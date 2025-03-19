@@ -19,64 +19,77 @@
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
     
-   
-    
     <!-- Navbar -->
-    <nav class="bg-gray-800 pl-[1000px] bg-opacity-0 p-6 fixed w-full top-0 shadow-lg shadow-[#7A73D1] z-50">
-
-        <ul class="flex justify-center space-x-10 text-2xl font-semibold">
+    <nav class="bg-black p-6  w-full top-0 shadow-lg shadow-[#7A73D1] z-50 flex items-center justify-between">
+        <img src="Animation - 1742287435949.gif" alt="Logo" class="w-12 h-12 rounded-full shadow-md">
+        <ul class="hidden md:flex space-x-10 text-2xl font-semibold">
             <li><a href="index.html" class="text-white hover:text-blue-400">Home</a></li>
             <li><a href="skills.html" class="text-white hover:text-blue-400">Skills</a></li>
             <li><a href="resume.html" class="text-white hover:text-blue-400">Resume</a></li>
             <li><a href="projects.html" class="text-white hover:text-blue-400">Projects</a></li>
             <li><a href="contacts.html" class="text-white hover:text-blue-400">Contacts</a></li>
         </ul>
+        <button class="md:hidden text-white text-2xl" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
-    
 
-    <header class="text-center mt-40">
-        <img src="Animation - 1742287435949.gif" alt="Souvik Panda" 
-             class="mx-auto w-48 h-48 rounded-full shadow-xl shadow-[#E8F9FF] transition-transform duration-300 ease-in-out 
-             hover:scale-110 hover:shadow-[0_0_20px_#4D55CC]">
-        <h1 class="text-4xl font-bold text-blue-500 mt-4">Hi, I am</h1>
-        <h2 class="text-6xl font-extrabold text-gray-800 dark:text-gray-200 animated-name">#SOUVIK_PANDA</h2>
-        <p class="text-xl mt-4">A Software Developer</p>
-    </header>
-    
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-black text-white text-center p-4 space-y-4" id="mobile-menu">
+        <a href="index.html" class="block hover:text-blue-400">Home</a>
+        <a href="skills.html" class="block hover:text-blue-400">Skills</a>
+        <a href="resume.html" class="block hover:text-blue-400">Resume</a>
+        <a href="projects.html" class="block hover:text-blue-400">Projects</a>
+        <a href="contacts.html" class="block hover:text-blue-400">Contacts</a>
+    </div>
 
+    <!-- Header Section -->
+    <header class="flex flex-col md:flex-row items-center justify-center mt-[100px] space-x-8 px-4 max-w-5xl mx-auto">
+        <img src="Animation - 1742287435949.gif" alt="Souvik Panda"
+            class="w-48 h-48 rounded-full shadow-xl shadow-[#E8F9FF] transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-[0_0_20px_#4D55CC]">
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl font-bold text-blue-500">Hi, I am</h1>
+            <h2 class="text-6xl font-extrabold text-gray-800 dark:text-gray-200 animated-name">#SOUVIK_PANDA</h2>
+            <p class="text-xl mt-4">A Software Developer</p>
+        </div>
+    </header>    
 
-
-
-    
     <!-- About Me Section -->
-    <section class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mt-27 text-center">
+    <section class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center mt-[90px]">
         <h2 class="text-3xl font-semibold text-blue-500">About Me</h2>
-        <p class="mt-4">Student of Electronics and Communications Engineering at <a href="https://rcciit.org/" class="text-blue-400">RCC Institute of Information Technology</a>.</p>
+        <p class="mt-4">Student of Electronics and Communications Engineering at 
+            <a href="https://rcciit.org/" class="text-blue-400">RCC Institute of Information Technology</a>.
+        </p>
         <p>Passed Madhyamik and Higher Secondary from <strong>Ballygunge Govt. High School</strong>.</p>
         <p>Passionate about Software and Electronics, aspiring to be a Software Developer.</p>
     </section>
-    
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center p-6 mt-10">
         <h3 class="text-2xl font-bold">Souvik</h3>
         <p>Feel free to connect with me:</p>
-        <ul class="socials flex justify-center space-x-6 mt-4">
-            <li><a href="https://www.facebook.com/souvik.panda.1650" class="text-white text-2xl hover:text-blue-400"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="https://www.instagram.com/_souvik_101/?hl=en" class="text-white text-2xl hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://github.com/souvik-panda18" class="text-white text-2xl hover:text-gray-400"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" class="text-white text-2xl hover:text-blue-300"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <ul class="flex justify-center space-x-6 mt-4">
+            <li><a href="https://www.facebook.com/souvik.panda.1650" class="text-white text-2xl hover:text-blue-400">
+                <i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/_souvik_101/?hl=en" class="text-white text-2xl hover:text-pink-400">
+                <i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://github.com/souvik-panda18" class="text-white text-2xl hover:text-gray-400">
+                <i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" class="text-white text-2xl hover:text-blue-300">
+                <i class="fa-brands fa-linkedin-in"></i></a></li>
         </ul>
-        <div class="footer-bottom bg-black text-gray-400 text-sm mt-4 py-3">
+        <div class="bg-black text-gray-400 text-sm mt-4 py-3">
             <p>&copy; 2025 Souvik Panda. Designed by <span class="text-blue-400">Souvik</span>.</p>
         </div>
     </footer>
     
-    <!-- JavaScript for Dark Mode Toggle -->
+    <!-- JavaScript for Mobile Menu -->
     <script>
-        const toggleButton = document.getElementById('darkModeToggle');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            toggleButton.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
