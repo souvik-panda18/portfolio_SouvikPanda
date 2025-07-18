@@ -14,84 +14,215 @@
         }
         .animated-name {
             animation: text3D 2s infinite alternate;
+            letter-spacing: 2px;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.55);
+            backdrop-filter: blur(8px);
+        }
+        .glow:hover {
+            box-shadow: 0 0 20px #7A73D1, 0 0 40px #7A73D1;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    
+<body class="bg-[url('Dark.jpg')] bg-cover bg-center bg-no-repeat text-gray-900 dark:text-gray-100 min-h-screen">
+
+
     <!-- Navbar -->
-    <nav class="bg-black p-6  w-full top-0 shadow-lg shadow-[#7A73D1] z-50 flex items-center justify-between">
-        <img src="Animation - 1742287435949.gif" alt="Logo" class="w-12 h-12 rounded-full shadow-md">
-        <ul class="hidden md:flex space-x-10 text-2xl font-semibold">
-            <li><a href="index.html" class="text-white hover:text-blue-400">Home</a></li>
-            <li><a href="skills.html" class="text-white hover:text-blue-400">Skills</a></li>
-            <li><a href="resume.html" class="text-white hover:text-blue-400">Resume</a></li>
-            <li><a href="projects.html" class="text-white hover:text-blue-400">Projects</a></li>
-            <li><a href="contacts.html" class="text-white hover:text-blue-400">Contacts</a></li>
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-lg p-3 shadow-md shadow-[#7A73D1] flex items-center justify-between px-8">
+        <img src="Animation - 1742287435949.gif" alt="Logo" class="w-12 h-12 rounded-full shadow-md border-2 border-blue-400">
+        <ul class="hidden md:flex gap-10 text-lg font-semibold tracking-wide">
+            <li><a href="index.html" class="text-white hover:text-blue-300 transition">Home</a></li>
+            <li><a href="#Skills" class="text-white hover:text-blue-300 transition">Skills</a></li>
+            <li><a href="#Resume" class="text-white hover:text-blue-300 transition">Resume</a></li>
+            <li><a href="#Projects" class="text-white hover:text-blue-300 transition">Projects</a></li>
+            <li><a href="#Contacts" class="text-white hover:text-blue-300 transition">Contacts</a></li>
         </ul>
-        <button class="md:hidden text-white text-2xl" id="menu-toggle">
+        <button class="md:hidden text-white text-3xl p-1" id="menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="hidden md:hidden bg-black text-white text-center p-4 space-y-4" id="mobile-menu">
-        <a href="index.html" class="block hover:text-blue-400">Home</a>
-        <a href="skills.html" class="block hover:text-blue-400">Skills</a>
-        <a href="resume.html" class="block hover:text-blue-400">Resume</a>
-        <a href="projects.html" class="block hover:text-blue-400">Projects</a>
-        <a href="contacts.html" class="block hover:text-blue-400">Contacts</a>
+    <div class="hidden md:hidden bg-black bg-opacity-95 backdrop-blur text-white text-center p-6 fixed top-[57px] w-full left-0 z-50 transition-all" id="mobile-menu">
+        <a href="index.html" class="block py-2 hover:text-blue-400">Home</a>
+        <a href="#Skills" class="block py-2 hover:text-blue-400">Skills</a>
+        <a href="#Resume" class="block py-2 hover:text-blue-400">Resume</a>
+        <a href="#Projects" class="block py-2 hover:text-blue-400">Projects</a>
+        <a href="#Contacts" class="block py-2 hover:text-blue-400">Contacts</a>
     </div>
 
     <!-- Header Section -->
-    <header class="flex flex-col md:flex-row items-center justify-center mt-[100px] space-x-8 px-4 max-w-5xl mx-auto">
-        <img src="Animation - 1742287435949.gif" alt="Souvik Panda"
-            class="w-48 h-48 rounded-full shadow-xl shadow-[#E8F9FF] transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-[0_0_20px_#4D55CC]">
+    <header class="flex flex-col md:flex-row items-center justify-center gap-10 mt-[100px] px-6 max-w-5xl mx-auto">
+        <img src="gpt.png" alt="Souvik Panda"
+             class="w-44 h-44 md:w-52 md:h-52 rounded-full shadow-xl border-4 border-blue-400 object-cover hover:scale-110 transition-transform duration-300 ease-in-out">
         <div class="text-center md:text-left">
-            <h1 class="text-4xl font-bold text-blue-500">Hi, I am</h1>
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-800 dark:text-gray-200 animated-name">
-                #SOUVIK_PANDA
-              </h2>
-              
-              
-            <p class="text-xl mt-4">A Software Developer</p>
+            <h1 class="text-3xl font-bold text-blue-500 mb-2 tracking-tight">Hi, I am</h1>
+            <h2 class="text-5xl sm:text-6xl font-extrabold text-gray-800 dark:text-gray-200 animated-name mb-3">#SOUVIK_PANDA</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-200">A Software Developer</p>
         </div>
-    </header>    
+    </header>
 
     <!-- About Me Section -->
-    <section class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center mt-[90px]">
-        <h2 class="text-3xl font-semibold text-blue-500">About Me</h2>
-        <p class="mt-4">Student of Electronics and Communications Engineering at 
-            <a href="https://rcciit.org/" class="text-blue-400">RCC Institute of Information Technology</a>.
+    <section class="max-w-3xl mx-auto bg-white/50 dark:bg-gray-800/70 p-8 rounded-2xl shadow-2xl glass-card text-center mt-20">
+        <h2 class="text-3xl font-bold text-blue-500 mb-3">About Me</h2>
+        <p class="mt-4 text-gray-800 dark:text-gray-200">
+            Student of Electronics & Communications Engineering at
+            <a href="https://rcciit.org/" class="text-blue-400 underline hover:text-blue-600">RCC Institute of Information Technology</a>.
         </p>
-        <p>Passed Madhyamik and Higher Secondary from <strong>Ballygunge Govt. High School</strong>.</p>
-        <p>Passionate about Software and Electronics, aspiring to be a Software Developer.</p>
+        <p class="mt-2 text-gray-800 dark:text-gray-200">
+            Passed Madhyamik & Higher Secondary from <strong class="text-blue-500">Ballygunge Govt. High School</strong>.
+        </p>
+        <p class="mt-2 text-gray-800 dark:text-gray-200">
+            Passionate about software, electronics, and aspiring to be a developer.
+        </p>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center p-6 mt-10">
-        <h3 class="text-2xl font-bold">Souvik</h3>
-        <p>Feel free to connect with me:</p>
-        <ul class="flex justify-center space-x-6 mt-4">
-            <li><a href="https://www.facebook.com/souvik.panda.1650" class="text-white text-2xl hover:text-blue-400">
-                <i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="https://www.instagram.com/_souvik_101/?hl=en" class="text-white text-2xl hover:text-pink-400">
-                <i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://github.com/souvik-panda18" class="text-white text-2xl hover:text-gray-400">
-                <i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" class="text-white text-2xl hover:text-blue-300">
-                <i class="fa-brands fa-linkedin-in"></i></a></li>
-        </ul>
-        <div class="bg-black text-gray-400 text-sm mt-4 py-3">
-            <p>&copy; 2025 Souvik Panda. Designed by <span class="text-blue-400">Souvik</span>.</p>
+    <!-- Skills Section -->
+    <section id="Skills" class="container mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold text-center text-blue-500 drop-shadow-lg mb-5 uppercase">My Skills</h2>
+        <p class="text-lg text-center mb-10">Technologies I work with:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-blue-100 dark:border-blue-900">
+                <h3 class="text-2xl font-bold text-blue-400 mb-2">C Programming</h3>
+                <p class="text-gray-100">⭐⭐⭐⭐ – Strong foundation in data structures and algorithms.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-red-100 dark:border-[#7D0A0A]">
+                <h3 class="text-2xl font-bold text-red-400 mb-2">Java</h3>
+                <p class="text-gray-100">⭐⭐⭐ – Intermediate, solved 250+ LeetCode problems.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-fuchsia-100 dark:border-[#A5158C]">
+                <h3 class="text-2xl font-bold text-fuchsia-400 mb-2">HTML &amp; CSS</h3>
+                <p class="text-gray-100">⭐⭐⭐⭐⭐ – Built numerous responsive projects.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-yellow-200 dark:border-[#F6DC43]">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-2">JavaScript</h3>
+                <p class="text-gray-100">⭐⭐⭐ – Solid understanding of frontend development.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-green-100 dark:border-[#06D001]">
+                <h3 class="text-2xl font-bold text-green-400 mb-2">Python</h3>
+                <p class="text-gray-100">⭐⭐⭐ – Used for scripting and AI applications.</p>
+            </div>
         </div>
+        <h2 class="text-3xl font-bold text-center text-blue-400 drop-shadow-lg mt-20 mb-7">Other Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-orange-200 dark:border-orange-800">
+                <h3 class="text-2xl font-bold text-orange-400 mb-2">Data Structures & Algorithms</h3>
+                <p class="text-gray-100">
+                    ⭐⭐⭐⭐ – Strong problem-solving skills.
+                    <a href="https://leetcode.com/u/Souvik_panda/" class="text-blue-400 underline ml-1">LeetCode</a>
+                </p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-pink-200 dark:border-pink-800">
+                <h3 class="text-2xl font-bold text-pink-400 mb-2">Object-Oriented Programming</h3>
+                <p class="text-gray-100">⭐⭐⭐⭐ – Good understanding of OOP principles.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl shadow-lg hover:scale-105 glow transition-transform cursor-pointer border border-teal-200 dark:border-teal-800">
+                <h3 class="text-2xl font-bold text-teal-400 mb-2">Machine Learning</h3>
+                <p class="text-gray-100">⭐⭐⭐ – Basic knowledge with hands-on projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <div id="Resume" class="max-w-4xl mx-auto mb-24 p-12 glass-card shadow-2xl rounded-2xl text-center">
+        <h2 class="text-3xl font-bold text-blue-500 mb-6">My Resume</h2>
+        <div class="flex justify-center mb-8">
+            <img src="images.png" alt="Resume Image" class="w-3/4 max-w-lg rounded-lg shadow-lg border-2 border-blue-400">
+        </div>
+        <a href="Souvik_Panda_Resume.pdf" download class="inline-block bg-gradient-to-r from-blue-500 to-violet-700 text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:from-blue-600 hover:to-violet-900 transition-all duration-200 focus:ring-4 focus:ring-blue-300">Download Resume</a>
+    </div>
+
+    <!-- Projects Section ---->
+     <section id="Projects" class="container mx-auto px-6 py-24">
+  <h2 class="text-4xl font-bold text-center text-blue-500 mb-5">My Projects</h2>
+  <p class="text-lg text-center mb-10">Here are some of my works:</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  
+    <!-- Project 1: QR Code Generator -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-400 hover:scale-105 transition-transform duration-300 group" 
+         style="background-image: url('Qrcode.png'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative p-6 h-full flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-blue-400 mb-2">QR Code Generator</h3>
+        <p class="text-gray-100 mb-2">
+          A Node.js project to generate QR codes efficiently for any link or text, offering instant download and preview.
+        </p>
+        <a href="https://github.com/souvik-panda18/LinkTo_qrcode" class="text-blue-400 underline font-semibold transition">View Project →</a>
+      </div>
+    </div>
+
+    <!-- Project 2: Drummer Website -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-300 hover:scale-105 transition-transform duration-300 group" 
+         style="background-image: url('Drummer.png'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative p-6 h-full flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-yellow-200 mb-2">A Drummer Website</h3>
+        <p class="text-gray-100 mb-2">
+          An interactive drumming webpage built with JavaScript, showcasing frontend audio API skills and user engagement techniques.
+        </p>
+        <a href="https://souvik-panda18.github.io/drum_courseJs/" class="text-blue-300 underline font-semibold">View Project →</a>
+      </div>
+    </div>
+
+    <!-- Project 3: Hotel Buffet Website -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-400 hover:scale-105 transition-transform duration-300 group" 
+         style="background-image: url('resturent.png'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative p-6 h-full flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-pink-200 mb-2">Sample Hotel Buffet Website</h3>
+        <p class="text-gray-100 mb-2">
+          A professional website for a Chinese restaurant, demonstrating responsive layouts and attractive menu displays.
+        </p>
+        <a href="https://souvik-panda18.github.io/HotelBufer/" class="text-blue-300 underline font-semibold">View Project →</a>
+      </div>
+    </div>
+
+    <!-- Project 4: IRCTC Railway Ticket Booking System -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-300 hover:scale-105 transition-transform duration-300 group" 
+         style="background-image: url('Irctc.png'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative p-6 h-full flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-green-300 mb-2">IRCTC Railway Ticket Booking System</h3>
+        <p class="text-gray-100 mb-2">
+          A Java console application simulating the IRCTC booking process using OOP, with seat allocation, waitlist management (queues), and user data persistence. Optimized for fast retrieval using data structures.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 5: Multithreaded Chat Server -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-300 hover:scale-105 transition-transform duration-300 group" 
+         style="background-image: url('Multithreded.png'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative p-6 h-full flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-purple-200 mb-2">Multithreaded Chat Server</h3>
+        <p class="text-gray-100 mb-2">
+          A Java-based TCP chat server supporting up to 50 concurrent clients, built with sockets and threads for real-time messaging and robust client management.
+        </p>
+      </div>
+    </div>
+  
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer id="Contacts" class="bg-gray-900 bg-opacity-90 text-white text-center p-8 mt-16 rounded-t-[2rem] shadow-2xl">
+        <h3 class="text-3xl font-bold drop-shadow-md mb-3 tracking-widest">Souvik</h3>
+        <p class="mb-3">Connect with me</p>
+        <ul class="flex justify-center space-x-8 mb-4">
+            <li><a href="https://www.facebook.com/souvik.panda.1650" class="hover:text-blue-400 text-2xl"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/_souvik_101/?hl=en" class="hover:text-pink-400 text-2xl"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://github.com/souvik-panda18" class="hover:text-gray-400 text-2xl"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" class="hover:text-blue-400 text-2xl"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+        <p class="text-sm text-gray-400">&copy; 2025 Souvik Panda. Designed by <span class="text-blue-400">Souvik</span>.</p>
     </footer>
-    
+
     <!-- JavaScript for Mobile Menu -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
