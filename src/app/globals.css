@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #172554;
+  --deep-blue: #0f172a;
+  --cream: #f6f3ee;
+  --orange: #ff7a2f;
+  --ink: #14153a;
+}
+
+html.dark {
+  --bg-color: #0b1124;
+  --deep-blue: #060a16;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #ffffff;
+  font-family: var(--font-bricolage), sans-serif;
+  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #ff7a2f;
+  color: #14153a;
+}
+
+/* Hard Shadows */
+.shadow-hard {
+  box-shadow: 6px 6px 0px var(--deep-blue);
+}
+
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0px var(--deep-blue);
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px var(--deep-blue);
+}
+
+.shadow-hard-ink {
+  box-shadow: 5px 5px 0px #14153a;
+}
+
+.shadow-hard-orange {
+  box-shadow: 5px 5px 0px #ff7a2f;
+}
+
+/* Smooth Horizontal Scroll Hide on WebKit */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

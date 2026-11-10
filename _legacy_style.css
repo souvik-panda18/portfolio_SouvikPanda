@@ -1,0 +1,727 @@
+/* ==========================================================================
+   FRAMER BENTO GRID PORTFOLIO - SOUVIK PANDA
+   Exact match to sleek, dark modular Bento card layout
+   ========================================================================== */
+
+:root {
+  --bg-page: #08080a;
+  --bg-card: #121215;
+  --bg-card-secondary: #17171c;
+  --bg-card-hover: #191920;
+  --bg-pill: #1b1b22;
+  --bg-pill-hover: #23232b;
+
+  --border-card: rgba(255, 255, 255, 0.06);
+  --border-card-hover: rgba(255, 255, 255, 0.14);
+  --border-dashed: rgba(255, 255, 255, 0.11);
+
+  --text-primary: #ffffff;
+  --text-heading: #f0f0f3;
+  --text-body: #8e8e96;
+  --text-muted: #5a5a63;
+
+  --accent-orange: #f97316;
+  --accent-emerald: #10b981;
+  --accent-blue: #38bdf8;
+  --accent-purple: #c084fc;
+
+  --radius-card: 22px;
+  --radius-inner: 14px;
+  --radius-pill: 9999px;
+
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition-smooth: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 2.5rem 1rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Outer Wrapper */
+.bento-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Main Grid: 2 Columns (62% / 38%) */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Sub-column flex wrappers */
+.bento-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card Common Styling */
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.bento-card:hover {
+  border-color: var(--border-card-hover);
+  background: var(--bg-card-hover);
+}
+
+.bento-card.dashed {
+  border: 1px dashed var(--border-dashed);
+}
+
+.bento-card.dashed:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 2-Column Row inside left column */
+.bento-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Badge (e.g. NEW, SOON, LIVE) */
+.card-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   1. HERO CARD (Top Left)
+   ========================================================================== */
+.hero-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px;
+}
+
+.avatar-ring {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f97316 20%, #c2410c 100%);
+  padding: 3px;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.25);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.hero-bio {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   2. BIO & PHILOSOPHY CARD (Top Right)
+   ========================================================================== */
+.about-card-framer {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-intro-text {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+.about-intro-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.about-sub-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.about-sub-desc {
+  font-size: 0.86rem;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.about-sub-desc a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.about-sub-desc a:hover {
+  text-decoration-color: #fff;
+}
+
+/* ==========================================================================
+   3. MINI ICON FEATURE CARDS (Middle Left Row 1)
+   ========================================================================== */
+.feature-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.feature-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.feature-desc {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   4. SHOWCASE CARDS WITH PREVIEW MOCKUP (Middle Left Row 2)
+   ========================================================================== */
+.showcase-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 300px;
+  justify-content: space-between;
+}
+
+.showcase-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.showcase-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.showcase-title {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.showcase-desc {
+  font-size: 0.8rem;
+  color: var(--text-body);
+  line-height: 1.4;
+}
+
+.showcase-media {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-inner);
+  overflow: hidden;
+  background: #0d0d10;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  margin-top: auto;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.showcase-card:hover .showcase-img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   5. PRODUCTS / ENGINEERING SPOTLIGHT (Middle Right)
+   ========================================================================== */
+.spotlight-card {
+  padding: 24px;
+}
+
+.spotlight-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.spotlight-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.spotlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spotlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-inner);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.spotlight-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.spotlight-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #1e1e24;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spotlight-item-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.spotlight-item-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotlight-item-desc {
+  font-size: 0.76rem;
+  color: var(--text-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   6. LET'S WORK TOGETHER / ACTION CARD (Wide Bottom Left)
+   ========================================================================== */
+.collab-card {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.collab-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.collab-title-group {
+  flex: 1;
+}
+
+.collab-headline {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.collab-desc {
+  font-size: 0.82rem;
+  color: var(--text-body);
+}
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 12px;
+  font-size: 0.82rem;
+  color: var(--text-body);
+}
+
+.collab-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.white-pill-btn {
+  background: #ffffff;
+  color: #08080a;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: transform var(--transition-smooth), background var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.white-pill-btn:hover {
+  background: #e5e5e7;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   7. SOCIAL & HANDLES CARD (Bottom Right)
+   ========================================================================== */
+.social-card-framer {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-top-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.social-icon-btn {
+  background: var(--bg-card-secondary);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-inner);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.social-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.social-handles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.handle-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-card-secondary);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.handle-pill:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.handle-pill i {
+  font-size: 0.85rem;
+}
+
+/* Footer copyright line */
+.framer-footer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.framer-footer a {
+  color: var(--text-body);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   8. MINI BOTTOM CARDS (Availability & Email Copy)
+   ========================================================================== */
+.availability-card {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.avail-headline {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.avail-desc {
+  font-size: 0.8rem;
+  color: var(--text-body);
+}
+
+.avail-pills-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.avail-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-card-secondary);
+  border: 1px solid var(--border-card);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.email-subscribe-card {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   9. MODAL & TOAST
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-card {
+  background: #141418;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--text-body);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #1c1c22;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transform: translateY(100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-header-row {
+    flex-direction: column;
+  }
+
+  .collab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collab-grid {
+    grid-template-columns: 1fr;
+  }
+}

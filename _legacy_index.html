@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Souvik Panda — Software Engineer</title>
+  <meta name="description" content="Portfolio of Souvik Panda — Software Engineer specializing in backend engineering, database systems, and intelligent applications.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bento Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bento-container">
+    <div class="bento-grid">
+
+      <!-- ===================================================================
+           LEFT COLUMN (Wider Column)
+           =================================================================== -->
+      <div class="bento-col">
+
+        <!-- 1. HERO CARD -->
+        <div class="bento-card hero-card">
+          <div class="avatar-ring">
+            <img src="gpt.png" alt="Souvik Panda" class="avatar-img">
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-heading">I'm Souvik Panda,<br>a Software Engineer and builder.</h1>
+            <p class="hero-bio">
+              With a background in Electronics and Communication Engineering, I build scalable backend architectures, database systems, and practical AI/LLM-powered tools that solve real engineering problems.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. ROW OF 2 FEATURE CARDS -->
+        <div class="bento-row-2">
+          <!-- Card A: NeetCode GPT -->
+          <div class="bento-card feature-card">
+            <span class="card-badge">NEW</span>
+            <div class="feature-header">
+              <div class="feature-icon-box" style="color: #f97316;">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h2 class="feature-title">NeetCode GPT</h2>
+            </div>
+            <p class="feature-desc">
+              Transformer built from scratch in Python with PyTorch — custom self-attention, multi-head layers, and autoregressive text generation.
+            </p>
+            <a href="https://github.com/souvik-panda18/neetcode-gpt" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: #fff; text-decoration: underline; margin-top: auto;">View Repository →</a>
+          </div>
+
+          <!-- Card B: IRCTC Reservation Engine (Dashed) -->
+          <div class="bento-card feature-card dashed">
+            <span class="card-badge">JAVA</span>
+            <div class="feature-header">
+              <div class="feature-icon-box" style="color: #38bdf8;">
+                <i class="fa-solid fa-train"></i>
+              </div>
+              <h2 class="feature-title">IRCTC Booking Engine</h2>
+            </div>
+            <p class="feature-desc">
+              High-throughput railway booking engine in Java with deterministic seat allocation, thread safety, and queue-based waitlists.
+            </p>
+            <a href="https://github.com/souvik-panda18/IRCTC-APP-Backend" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: #fff; text-decoration: underline; margin-top: auto;">Explore Architecture →</a>
+          </div>
+        </div>
+
+        <!-- 3. ROW OF 2 SHOWCASE CARDS (With Media Previews) -->
+        <div class="bento-row-2">
+          <!-- Showcase 1: AI-Powered SQL Generator -->
+          <div class="bento-card showcase-card">
+            <div>
+              <div class="showcase-header">
+                <div class="showcase-icon-box" style="color: #c084fc;">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <h3 class="showcase-title">AI SQL Generator</h3>
+              </div>
+              <p class="showcase-desc" style="margin-top: 8px;">
+                Natural language to SQL query engine with schema context injection, syntax verification, and FastAPI backend.
+              </p>
+            </div>
+            <div class="showcase-media">
+              <img src="Irctc.png" alt="AI SQL Generator" class="showcase-img">
+            </div>
+          </div>
+
+          <!-- Showcase 2: Multi-Threaded TCP Server -->
+          <div class="bento-card showcase-card">
+            <div>
+              <div class="showcase-header">
+                <div class="showcase-icon-box" style="color: #10b981;">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <h3 class="showcase-title">Multi-Threaded Server</h3>
+              </div>
+              <p class="showcase-desc" style="margin-top: 8px;">
+                Lightweight HTTP/1.1 TCP server built on raw Java sockets handling 50+ concurrent client connections.
+              </p>
+            </div>
+            <div class="showcase-media">
+              <img src="Multithreded.png" alt="Multi-Threaded TCP Server" class="showcase-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. LET'S WORK TOGETHER / ACTION CARD -->
+        <div class="bento-card collab-card">
+          <div class="collab-header-row">
+            <div class="collab-title-group">
+              <h3 class="collab-headline">Let's connect — Open for engineering roles & collaborations.</h3>
+              <p class="collab-desc">Feel free to reach out to discuss backend engineering, internships, or system development.</p>
+            </div>
+            <button class="white-pill-btn" id="open-contact-btn">
+              Get in touch
+            </button>
+          </div>
+
+          <div class="collab-grid">
+            <div class="collab-item">— Backend Engineering</div>
+            <div class="collab-item">— Database Systems</div>
+            <div class="collab-item">— Python & FastAPI</div>
+            <div class="collab-item">— Node.js & REST APIs</div>
+            <div class="collab-item">— AI & LLM Systems</div>
+            <div class="collab-item">— System Architecture</div>
+          </div>
+        </div>
+
+        <!-- 5. ROW OF 2 BOTTOM CARDS (Availability & Email Copy) -->
+        <div class="bento-row-2">
+          <!-- Availability -->
+          <div class="bento-card availability-card">
+            <div>
+              <h4 class="avail-headline">Availability — Open for Opportunities</h4>
+              <p class="avail-desc" style="margin-top: 4px;">Actively considering software engineering roles.</p>
+            </div>
+            <div class="avail-pills-row">
+              <span class="avail-badge">Full-time</span>
+              <span class="avail-badge">Internship</span>
+              <span class="avail-badge">Remote / On-site</span>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries / Email Copy -->
+          <div class="bento-card email-subscribe-card">
+            <div>
+              <h4 class="avail-headline">Direct Email — souvikpanda.work@gmail.com</h4>
+              <p class="avail-desc" style="margin-top: 4px;">One-click copy to write directly.</p>
+            </div>
+            <div class="email-copy-row">
+              <button class="white-pill-btn" id="copy-email-bento" style="padding: 6px 16px; font-size: 0.8rem;">
+                <i class="fa-regular fa-copy"></i> Copy email
+              </button>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Kolkata, IN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           RIGHT COLUMN (Narrative, Spotlight & Socials)
+           =================================================================== -->
+      <div class="bento-col">
+
+        <!-- 1. BIO, PHILOSOPHY & BACKGROUND CARD -->
+        <div class="bento-card about-card-framer">
+          <p class="about-intro-text">
+            I'm a <strong>software engineer</strong> based in Kolkata. Calm over chaos, experimental over predictable, learning over consuming.
+          </p>
+
+          <div class="about-sub-block">
+            <span class="about-label">My Philosophy</span>
+            <p class="about-sub-desc" style="font-style: italic; color: #fff;">
+              “Build things that work, understand why they work, and keep improving them.”
+            </p>
+          </div>
+
+          <div class="about-sub-block">
+            <span class="about-label">Now</span>
+            <p class="about-sub-desc">
+              Building backend services with <strong>Python, FastAPI, Node.js, and SQL</strong>, while exploring AI & LLM tooling for practical engineering.
+            </p>
+          </div>
+
+          <div class="about-sub-block">
+            <span class="about-label">Education</span>
+            <p class="about-sub-desc">
+              B.Tech in Electronics & Communication at <a href="https://rcciit.org/" target="_blank" rel="noopener noreferrer">RCCIIT</a> ('21–'25). Higher Secondary from <span style="color: #fff;">Ballygunge Govt. High School</span>.
+            </p>
+          </div>
+
+          <div class="about-sub-block">
+            <span class="about-label">Fundamentals</span>
+            <p class="about-sub-desc">
+              Solved <strong>250+ LeetCode</strong> problems across Data Structures & Algorithms. <strong>30+ public repositories</strong> on GitHub.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. ENGINEERING SPOTLIGHT (Dashed Border) -->
+        <div class="bento-card spotlight-card dashed">
+          <h3 class="spotlight-title">Engineering Spotlight</h3>
+          <p class="spotlight-subtitle">Featured interactive apps and utilities from my workspace.</p>
+
+          <div class="spotlight-list">
+            <!-- Item 1: Drummer -->
+            <a href="https://souvik-panda18.github.io/drum_courseJs/" target="_blank" rel="noopener noreferrer" class="spotlight-item">
+              <img src="Drummer.png" alt="Drummer App" class="spotlight-thumb">
+              <div class="spotlight-item-info">
+                <div class="spotlight-item-name">Web Audio Drummer</div>
+                <div class="spotlight-item-desc">Interactive browser synthesizer & sound API</div>
+              </div>
+            </a>
+
+            <!-- Item 2: QR Code -->
+            <a href="https://github.com/souvik-panda18/LinkTo_qrcode" target="_blank" rel="noopener noreferrer" class="spotlight-item">
+              <img src="Qrcode.png" alt="QR Code Generator" class="spotlight-thumb">
+              <div class="spotlight-item-info">
+                <div class="spotlight-item-name">Link-to-QR Generator</div>
+                <div class="spotlight-item-desc">Node.js fast matrix QR code generation CLI</div>
+              </div>
+            </a>
+
+            <!-- Item 3: Mobile Task App -->
+            <a href="https://github.com/souvik-panda18/react-native-todo-app-with-authentication" target="_blank" rel="noopener noreferrer" class="spotlight-item">
+              <img src="images.png" alt="Mobile App" class="spotlight-thumb">
+              <div class="spotlight-item-info">
+                <div class="spotlight-item-name">Mobile Task Manager</div>
+                <div class="spotlight-item-desc">React Native application with JWT auth</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. SOCIALS, HANDLES & RESUME CARD -->
+        <div class="bento-card social-card-framer">
+          <!-- Top Icon Buttons -->
+          <div class="social-top-icons">
+            <a href="https://github.com/souvik-panda18" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/u/Souvik_panda/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LeetCode">
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+
+          <!-- Handle Pills -->
+          <div class="social-handles-grid">
+            <a href="https://github.com/souvik-panda18" target="_blank" rel="noopener noreferrer" class="handle-pill">
+              <i class="fa-brands fa-github" style="color: #fff;"></i>
+              <span>@souvik-panda18</span>
+            </a>
+            <a href="https://www.linkedin.com/in/souvik-panda-60bb02250/" target="_blank" rel="noopener noreferrer" class="handle-pill">
+              <i class="fa-brands fa-linkedin" style="color: #38bdf8;"></i>
+              <span>@souvik-panda</span>
+            </a>
+            <a href="https://www.instagram.com/_souvik_101/?hl=en" target="_blank" rel="noopener noreferrer" class="handle-pill">
+              <i class="fa-brands fa-instagram" style="color: #f472b6;"></i>
+              <span>@_souvik_101</span>
+            </a>
+            <a href="Souvik_Panda_Resume.pdf" target="_blank" download class="handle-pill">
+              <i class="fa-regular fa-file-pdf" style="color: #f97316;"></i>
+              <span>resume.pdf</span>
+            </a>
+          </div>
+
+          <!-- Footer Copyright -->
+          <div class="framer-footer">
+            Portfolio designed for <strong style="color: #fff;">Souvik Panda</strong>.<br>
+            All rights reserved &copy; 2026.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Contact Modal -->
+  <div class="modal-overlay" id="contact-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Let's work together</h3>
+      <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 18px;">
+        Drop a message regarding an engineering role, collaboration, or question.
+      </p>
+
+      <form id="modal-form" style="display: flex; flex-direction: column; gap: 12px;">
+        <input type="text" placeholder="Your Name" required style="background: #1c1c22; border: 1px solid rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 10px; color: #fff; font-family: inherit; font-size: 0.9rem; outline: none;">
+        <input type="email" placeholder="Your Email" required style="background: #1c1c22; border: 1px solid rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 10px; color: #fff; font-family: inherit; font-size: 0.9rem; outline: none;">
+        <textarea placeholder="Your Message..." rows="4" required style="background: #1c1c22; border: 1px solid rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 10px; color: #fff; font-family: inherit; font-size: 0.9rem; outline: none; resize: vertical;"></textarea>
+        <button type="submit" class="white-pill-btn" style="width: 100%; margin-top: 6px;">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: #10b981;"></i>
+    <span id="toast-msg">Copied to clipboard</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
